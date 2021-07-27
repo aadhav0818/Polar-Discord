@@ -1,0 +1,25 @@
+{
+    "default": "#348ceb",
+    "error": "RED",
+    "success": "#00ff3c",
+
+    "reddit": "#fc5a03",
+    "minecraft": "#08820c",
+
+    "hypixel": {
+        "player" : {
+            "unranked": "#c2c2c2",
+            "vip": "#79e741",
+            "mvp": "#6de6e6",
+            "mvp_plus_plus" : "#f4aa33"
+        },
+        "staff" : {
+            "youtuber" : "#ea5052",
+            "helper" : "#4c4fcc",
+            "moderator" : "#418107",
+            "admin" : "#ea5052"
+        }
+        
+
+    }
+}

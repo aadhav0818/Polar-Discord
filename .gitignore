@@ -1,0 +1,6 @@
+#restricted
+config.json
+
+#npm
+package.json
+package-lock.json
