@@ -5,8 +5,9 @@ const config = require('./config.json');
 client.commands = new Discord.Collection();
 client.events = new Discord.Collection();
 
-require('./handlers/command-handler')(client,Discord);
-require('./handlers/event-handler')(client,Discord);
+['command-handler', 'event-handler'].forEach(handler => {
+    require(`./handlers/${handler}`)(client, Discord)
+})
 
 client.login(config.discord)
 /*\
