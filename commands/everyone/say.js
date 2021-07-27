@@ -13,7 +13,6 @@ module.exports = {
             if(message.attachments.size > 0) {
                 words = "||~~Media~~|"
             } 
-            console.log(message.content)
             const regex = /<@![0-9]+>/g
             words = words.replace(regex, "||~~User Ping~~||")
             const roleRegex = /<@&[0-9]+>/g

@@ -3,9 +3,7 @@ const errors = require('../../errors.json')
 const config = require('../../config.json')
 const colors = require('../../colors.json')
 module.exports = (Discord, client, message) => {
-    if(message && !message.author.bot) {
-        console.log(message.guild.name + ": " +  message.author.username + ": " + message.content)
-    }
+
     setInterval(() => {
         let users = 0;
         client.guilds.cache.forEach(guild => {
