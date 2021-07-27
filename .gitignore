@@ -4,3 +4,6 @@ config.json
 #npm
 package.json
 package-lock.json
+
+#system
+.vscode
