@@ -26,10 +26,11 @@
 ➤ **Status:** `In Development (indev)`
 
 #### Invite Link
-[Click Here](https://discord.com/oauth2/authorize?client_id=760553137605181541&permissions=4294967287&scope=bot 'Polar Invite Link') to invite Polar bot. Inviting would be much appreciated as it helps me out :). **Note:** _Disabling the permissions asked for may result in the commands which are reliant on said permission to malfunction._
+[Click Here](https://discord.com/oauth2/authorize?client_id=760553137605181541&permissions=4294967287&scope=bot 'Polar Invite Link') to invite Polar bot. Inviting would be much appreciated as it helps me out :).
+ **Note:** _Disabling the permissions asked for may result in the commands which are reliant on said permission to malfunction._
 
 #### Bot Config
-###### Default Prefix: `<`
+###### Default Prefix: `>`
 Use the prefix before typing the command in order to recieve an output. 
 
 ---
