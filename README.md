@@ -4,6 +4,9 @@
 # The Basics
 ###### Polar is a Discord Bot Application that performs a variety of useful functions related to mathematics, server configuration, and also has built in mini applications which are of general use (For example: `Typing Tests`, `Calculators`, `Search tools`, etc).
 
+--- 
+
+
 # Statistics and Information
 ➤ **Users:** `663`
 ➤ **Guilds:** `8`
@@ -23,6 +26,8 @@
 ###### Default Prefix: `<`
 Use the prefix before typing the command in order to recieve an output. 
 
+---
+
 # Commands
 ###### `*` = Optional Argument
 #### Server Config / Admin
@@ -35,11 +40,16 @@ removechannel | |
 addrole | |
 deleterole | |
 
+---
+
 # Contributing
-Please DM me if you would like to help contribute to the bot in ter ms of testing, ideas, and quality assurance.
+Please DM me if you would like to help contribute to the bot in terms of testing, ideas, and quality assurance.
 
 ##### Contributor List
 ➤ `Dankbears`
+
+---
+
 # License
 This repository and application is under the **MIT License**.
 [MIT License Usage Permissions](https://en.wikipedia.org/wiki/MIT_License)
