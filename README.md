@@ -9,13 +9,19 @@
 
 # Statistics and Information
 ➤ **Users:** `663`
+
 ➤ **Guilds:** `8`
 
+
 ➤ **Library:** `discord.js v12`
+
 ➤ **Runtime Environment** `node.js v14.17`
 
+
 ➤ **Developer:** `Arcturus (P0LARB34R#4038)`
+
 ➤ **Establishment:** `September 2020`
+
 
 ➤ **Status:** `In Development (indev)`
 
@@ -51,5 +57,4 @@ Please DM me if you would like to help contribute to the bot in terms of testing
 ---
 
 # License
-This repository and application is under the **MIT License**.
-[MIT License Usage Permissions](https://en.wikipedia.org/wiki/MIT_License)
+This repository and application is protected under the [MIT License](https://en.wikipedia.org/wiki/MIT_License).
