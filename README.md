@@ -38,7 +38,7 @@ deleterole | |
 ## Contributing
 Please DM me if you would like to help contribute to the bot in ter ms of testing, ideas, and quality assurance.
 
-#####Contributor List
+##### Contributor List
 ➤ `Dankbears`
 ## License
 This repository and application is under the **MIT License**.
