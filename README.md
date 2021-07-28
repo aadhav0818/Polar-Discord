@@ -1,1 +1,2 @@
-## Polar Discord Bot Application
+# Polar - Discord
+
