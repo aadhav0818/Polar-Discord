@@ -47,6 +47,18 @@ removechannel | |
 addrole | |
 deleterole | |
 
+
+#### Informational
+Command Name | Description | Usage
+--- | --- | --- 
+help | |
+info | |
+ping | |
+say | |
+testcolor | |
+users | |
+invite | |
+
 ---
 
 # Contributing
