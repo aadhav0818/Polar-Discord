@@ -13,9 +13,9 @@
 ➤ **Guilds:** `8`
 
 
-➤ **Library:** `discord.js v12`
+➤ **Library:** `discord.js v13.0.1`
 
-➤ **Runtime Environment** `node.js v14.17`
+➤ **Runtime Environment** `node.js v16.6.1`
 
 
 ➤ **Developer:** `Arcturus (P0LARB34R#4038)`
