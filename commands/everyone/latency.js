@@ -15,6 +15,6 @@ module.exports = {
             .addField('User Ping', '```' + userPing + ' ms```')
             .addField('API Ping', '```' + apiPing + ' ms```')
             .setColor(colors.default)
-        message.channel.send(pingEmbed)
+        message.channel.send({ embeds: [pingEmbed] })
     }
 }

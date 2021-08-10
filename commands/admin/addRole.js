@@ -13,14 +13,14 @@ module.exports = {
                 .setTitle('Command Error')
                 .addField('Reason', 'This command can only be used in a server!')
                 .setColor(colors.error)
-            return message.author.send(dmEmbed);
+            return message.author.send({ embeds: [dmEmbed] });
         }
             if(!message.member.hasPermission('MANAGE_ROLES')) {
                 const noPermsEmbed = new Discord.MessageEmbed() 
                     .setTitle('Command Error')
                     .addField('Reason', 'Missing permissions: `MANAGE_ROLES`', false)
                     .setColor(colors.error)
-                return message.channel.send(noPermsEmbed)
+                return message.channel.send({ embeds: [noPermsEmbed] })
             }
             if(!args[0]) {
                 const noArgsEmbed = new Discord.MessageEmbed() 
@@ -29,7 +29,7 @@ module.exports = {
                     .addField('Usage', this.usage, false)
                     .addField('Example', this.example, false)
                     .setColor(colors.error)
-                return message.channel.send(noArgsEmbed)
+                return message.channel.send({ embeds: [noArgsEmbed] })
             }
             const roleName = args[0];
             const successEmbed = new Discord.MessageEmbed()
@@ -45,7 +45,7 @@ module.exports = {
                 }).then(addedRole => {
                     const id = addedRole.id;
                     successEmbed.addField('Role Information', `Preview: <@&${id}>\nRole ID: ${id}`)
-                    message.channel.send(successEmbed)
+                    message.channel.send({ embeds: [successEmbed] })
                 });  
             }
             else {
@@ -57,7 +57,7 @@ module.exports = {
                 }).then(addedRole => {
                     const id = addedRole.id;
                     successEmbed.addField('Role Information', `Preview: <@&${id}>\nRole ID: ${id}`)
-                    message.channel.send(successEmbed)
+                    message.channel.send({ embeds: [successEmbed] })
                 });  
             }
            

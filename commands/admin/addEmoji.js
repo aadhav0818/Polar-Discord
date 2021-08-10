@@ -14,14 +14,14 @@ module.exports = {
                 .setTitle('Command Error')
                 .addField('Reason', 'This command can only be used in a server!')
                 .setColor(colors.error)
-            return message.author.send(dmEmbed);
+            return message.author.send({ embeds: [dmEmbed] });
         }
         if(!message.member.hasPermission('MANAGE_EMOJIS')) {
             const noPermsEmbed = new Discord.MessageEmbed() 
                 .setTitle('Command Error')
                 .addField('Reason', 'Missing permissions: `MANAGE_EMOJIS`', false)
                 .setColor(colors.error)
-            return message.channel.send(noPermsEmbed)
+            return message.channel.send({ embeds: [noPermsEmbed] })
         }
         const emoji = args[0]
         var name = args[1]
@@ -32,7 +32,7 @@ module.exports = {
                 .addField('Usage', this.usage, false)
                 .addField('Example', this.example, false)
                 .setColor(colors.error)
-            return message.channel.send(noArgsEmbed)
+            return message.channel.send({ embeds: [noArgsEmbed] })
         }
         if(emoji && !name) {
             name = (Math.floor(Math.random() * 10000000)).toString()
@@ -47,7 +47,7 @@ module.exports = {
             if(!args[1]) {
                 successEmojiEmbed.setDescription('A random integer value was assigned to the emoji because `name (args[1])` was missing! To see usage: Use `help addemoji`')
             }
-            message.channel.send(successEmojiEmbed)
+            message.channel.send({ embeds: [successEmojiEmbed] })
         }
     }
     catch(err) {
@@ -57,7 +57,7 @@ module.exports = {
             .addField('Usage', this.usage, false)
             .addField('Example', this.example, false)
             .setColor(colors.error)
-        return message.channel.send(errEmbed)
+        return message.channel.send({ embeds: [errEmbed] })
     }
     }
 }

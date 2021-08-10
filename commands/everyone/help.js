@@ -20,7 +20,7 @@ module.exports = {
                 .addField('Moderation', '```' + '\npurge\nembed' + '```')
                 .setColor(colors.default)
                 .setFooter(`PolarBot™ ${config.version}`)
-            message.channel.send(embedHelp)
+            message.channel.send({ embeds: [embedHelp] })
         }
     }
 }

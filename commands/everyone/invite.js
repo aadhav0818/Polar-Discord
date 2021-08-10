@@ -18,6 +18,6 @@ module.exports = {
 
         .addField('Coming Soon', 'Polarbot Website & Documentation')
         .
-        message.channel.send(info) 
+        message.channel.send({ embeds: [info] }) 
     }
 }

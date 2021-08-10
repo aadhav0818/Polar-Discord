@@ -21,19 +21,19 @@ module.exports = {
                     .addField('Usage', this.usage, false)
                     .addField('Example', this.example, false)
                     .setColor(colors.error)
-                return message.channel.send(noArgsEmbed)
+                return message.channel.send({ embeds: [noArgsEmbed] })
             }
             const colorEmbed = new Discord.MessageEmbed() 
                 .setTitle(color)
                 .setColor(color.toUpperCase())
-            message.channel.send(colorEmbed)
+            message.channel.send({ embeds: [colorEmbed] })
         }
         catch(err) {
             const errEmbed = new Discord.MessageEmbed()
                 .setTitle('Command Error')
                 .addField('Reason', 'Invalid Color Range')
                 .setColor(colors.error)
-            message.channel.send(errEmbed)
+            message.channel.send({ embeds: [errEmbed] })
         }   
     }
 }

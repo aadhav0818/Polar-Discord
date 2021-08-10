@@ -13,14 +13,14 @@ module.exports = {
                 .setTitle('Command Error')
                 .addField('Reason', 'This command can only be used in a server!')
                 .setColor(colors.error)
-            return message.author.send(dmEmbed);
+            return message.author.send({ embeds: [dmEmbed] });
         }
         if(!message.member.hasPermission('MANAGE_ROLES')) {
             const noPermsEmbed = new Discord.MessageEmbed() 
                 .setTitle('Command Error')
                 .addField('Reason', 'Missing permissions: `MANAGE_ROLES`', false)
                 .setColor(colors.error)
-            return message.channel.send(noPermsEmbed)
+            return message.channel.send({ embeds: [noPermsEmbed] })
         }
         if(!args[0]) {
             const noArgsEmbed = new Discord.MessageEmbed() 
@@ -29,7 +29,7 @@ module.exports = {
                 .addField('Usage', this.usage, false)
                 .addField('Example', this.example, false)
                 .setColor(colors.error)
-            return message.channel.send(noArgsEmbed)
+            return message.channel.send({ embeds: [noArgsEmbed] })
         }
         const successEmbed = new Discord.MessageEmbed()
             .setTitle('✅ Successfully deleted a role from the server!') 
@@ -41,14 +41,14 @@ module.exports = {
             const guildRole = message.guild.roles.cache.find(r => r.id == match[1])
             await guildRole.delete();
             successEmbed.addField('Role Information', `Name: ${guildRole.name}`)
-            message.channel.send(successEmbed)
+            message.channel.send({ embeds: [successEmbed] })
         }
         else {
             if(message.guild.roles.cache.find(r => r.id == role)) {
                 const guildRole = message.guild.roles.cache.find(r => r.id == role)
                 guildRole.delete();
                 successEmbed.addField('Role Information', `Name: ${guildRole.name}`)
-                message.channel.send(successEmbed)
+                message.channel.send({ embeds: [successEmbed] })
             }
             else {
                 const errEmbed = new Discord.MessageEmbed() 
@@ -56,7 +56,7 @@ module.exports = {
                     .addField('Reason', 'Could not find the specified role!', false)
                     .addField('Example', this.example, false)
                     .setColor(colors.error)
-                 return message.channel.send(errEmbed);
+                 return message.channel.send({ embeds: [errEmbed] });
             }
 
         }

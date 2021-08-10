@@ -36,7 +36,7 @@ module.exports = {
                 .addField('Usage', this.usage, false)
                 .addField('Example', this.example)
                 .setColor(colors.error)
-            return message.channel.send(errEmbed);
+            return message.channel.send({ embeds: [errEmbed] });
         }
     }
 }

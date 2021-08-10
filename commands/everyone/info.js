@@ -23,6 +23,6 @@ module.exports = {
             .addField('Guilds Joined', client.guilds.cache.size , false)
             .addField('Users', users , false)
             .setFooter(`PolarBot ${config.version} • Contact P0LARB34R#4038 for help or Q/A`)
-        message.channel.send(info) 
+        message.channel.send({ embeds: [info] }) 
     }
 }
