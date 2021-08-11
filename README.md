@@ -35,32 +35,6 @@ Use the prefix before typing the command in order to recieve an output.
 
 ---
 
-# Commands
-###### `*` = Optional Argument
-#### Server Config / Admin
-Command Name | Description | Usage
---- | --- | ---
-addemoji | adds an emoji to the server | addemoji [link] [name]
-removeemoji | removes an emoji from the server | deleteemoji [emoji]
-addchannel | |
-removechannel | |
-addrole | |
-deleterole | |
-
-
-#### Informational
-Command Name | Description | Usage
---- | --- | --- 
-help | |
-info | |
-ping | |
-say | |
-testcolor | |
-users | |
-invite | |
-
----
-
 # Contributing
 Please DM me if you would like to help contribute to the bot in terms of testing, ideas, and quality assurance.
 
