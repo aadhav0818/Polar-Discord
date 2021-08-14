@@ -34,7 +34,7 @@ Polar is a discord bot dedicated to the fields of science, technology, engineeri
 [<b>Click Here</b>](https://discord.com/api/oauth2/authorize?client_id=760553137605181541&permissions=8&scope=bot) to invite Polar Bot! 
 > **Note:** Denying the administrator permission may cause a few commands to malfunction
 
-<iframe src="https://discordapp.com/widget?id=875139099944710204&theme=dark" width="500" height="300" allowtransparency="true" frameborder="0" sandbox="allow-popups allow-popups-to-escape-sandbox allow-same-origin allow-scripts"></iframe>
+[<b>Click Here</b>](https://discord.gg/brK375AgfR) to join the Polar Support Server!
 
 ## Contributing
 
