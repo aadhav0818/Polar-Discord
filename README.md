@@ -26,6 +26,7 @@ Polar is a discord bot dedicated to the fields of science, technology, engineeri
 - [Discord JS Documentation](https://discord.js.org/#/)
 - [Markdown Badges](https://shields.io/)
 - [My GitHub Page](https://github.com/Arcturusss)
+- [Polar Code Template](https://github.com/Arcturusss/Polar-Discord/blob/master/MAIN-TEMPLATE.md)
 
 ## Discord
 
