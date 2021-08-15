@@ -1,8 +1,6 @@
 const Discord = require("discord.js")
-const errors = require('../../errors.json')
 const config = require('../../config.json')
-const colors = require('../../colors.json')
-module.exports = {
+module.exports = {  
     name: 'guildlist',
     description: 'Sends a list of guilds',
     usage: '```' + `${config.prefix}guildlist` + '```',

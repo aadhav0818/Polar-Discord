@@ -1,5 +1,5 @@
-const Discord = require("discord.js");const errors = require('../../errors.json');const config = require('../../config.json');
-const colors = require('../../colors.json'); 
+const Discord = require("discord.js");
+const config = require('../../config.json');
 
 module.exports = {
     name: 'invite',

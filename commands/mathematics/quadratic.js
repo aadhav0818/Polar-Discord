@@ -1,7 +1,6 @@
 const Discord = require('discord.js')
-const errors = require('../../errors.json')
 const config = require('../../config.json')
-const colors = require('../../colors.json')
+
 module.exports = {
     name: 'quadratic',
     description: 'Calculates a quadratic equation and its properties',

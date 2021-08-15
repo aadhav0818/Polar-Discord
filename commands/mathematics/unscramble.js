@@ -1,5 +1,6 @@
-const Discord = require("discord.js");const errors = require('../../errors.json');const config = require('../../config.json');
-const colors = require('../../colors.json');  const wordlist = require('wordlist-english');
+const Discord = require("discord.js");
+const config = require('../../config.json');
+const wordlist = require('wordlist-english');
 const shuffle = require('shuffle-array');
 module.exports = {
 

@@ -1,7 +1,8 @@
 const Discord = require("discord.js")
-const errors = require('../../errors.json'); const config = require('../../config.json'); const colors = require('../../colors.json')
+const config = require('../../config.json'); 
 const moment = require('moment')
 const request = require('node-superfetch')
+
 module.exports = {
     name: 'reddit-profile',
     description: 'Shows the profile of a user on the reddit platform',

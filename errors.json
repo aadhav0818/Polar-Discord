@@ -1,7 +1,0 @@
-
-{
-    "noArgsErr": "No arguments were provided",
-    "illegalCharErr": "String contains one or more illegal characters!",
-    "unknownCmdErr": "The command you requested information from is not in this application!",
-    "unknownErr": "Something went wrong! Please contact P0LARB34R#4038 in a direct message to fix this issue!"
-}

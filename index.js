@@ -9,7 +9,7 @@ client.events = new Discord.Collection();
     require(`./handlers/${handler}`)(client, Discord)
 })
 
-client.login(config.discord)
+client.login(config.tokens.discord)
 
 
 

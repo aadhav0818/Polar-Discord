@@ -1,8 +1,7 @@
 const Discord = require("discord.js")
-const errors = require('../../errors.json')
 const config = require('../../config.json')
-const colors = require('../../colors.json')
 const imageApi = require('imageapi.js')
+
 module.exports = {
     name: 'reddit-meme',
     description: 'Finds a random meme from a subreddit',

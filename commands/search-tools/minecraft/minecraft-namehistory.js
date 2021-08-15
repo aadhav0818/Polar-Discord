@@ -1,5 +1,5 @@
 const Discord = require("discord.js")
-const errors = require('../../errors.json'); const config = require('../../config.json'); const colors = require('../../colors.json')
+const config = require('../../config.json');
 const minecraftPlayer = require("minecraft-player");
 module.exports = {
     name: 'minecraft-namehistory',

@@ -1,6 +1,5 @@
 const Discord = require('discord.js')
 const config = require('../../config.json')
-const colors = require('../../colors.json')
 module.exports = {
     name: 'help',
     description: 'Sends list of commands',

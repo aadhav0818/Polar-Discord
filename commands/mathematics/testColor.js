@@ -1,5 +1,6 @@
-const config = require('../../config.json');const errors = require('../../errors.json');const colors = require('../../colors.json')
+const config = require('../../config.json');
 const Discord = require('discord.js')
+
 module.exports = {
     /** 
      * @param {Discord.Message} message

@@ -1,7 +1,6 @@
 const config = require('../../config.json')
-const errors = require('../../errors.json')
 const Discord = require('discord.js')
-const colors = require('../../colors.json')
+
 module.exports = {
     name: 'convert',
     description: 'Converts a value from the initial base to the target base',

@@ -1,7 +1,5 @@
 const Discord = require("discord.js")
-const errors = require('../../errors.json')
 const config = require('../../config.json')
-const colors = require('../../colors.json')
 module.exports = {
     name: 'purge',
     description: 'Deletes up to a 100 messages in a channel at once',

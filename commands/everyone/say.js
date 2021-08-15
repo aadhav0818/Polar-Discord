@@ -1,7 +1,6 @@
 const Discord = require('discord.js');
 const config = require('../../config.json');
-const errors = require('../../errors.json')
-const colors = require('../../colors.json')
+
 module.exports = {
     name: 'say',
     description: 'Sends a user-defined string in a channel',

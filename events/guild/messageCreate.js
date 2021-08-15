@@ -1,7 +1,6 @@
 const Discord = require('discord.js');
-const errors = require('../../errors.json')
-const config = require('../../config.json')
-const colors = require('../../colors.json')
+const config = require('../../config.json');
+
 module.exports = (Discord, client, message) => {
 
     setInterval(() => {
@@ -24,9 +23,9 @@ module.exports = (Discord, client, message) => {
         if(!client.commands.find(cmd => cmd.name == commandName)) {
             let unknownCommand = new Discord.MessageEmbed()
                 .setTitle('Command Error')
-                .addField('Reason', `${errors.unknownCmdErr} Do ${config.prefix}help to see a list of commands!`, false)
+                .addField('Reason', `${config.errors.UNKNOWN_CMD_ERROR} Do ${config.prefix}help to see a list of commands!`, false)
                 .addField('Usage', '```js\n' + `${config.prefix}help [command]` + '```')
-                .setColor(config.errorColor)
+                .setColor(config.colors.error)
             message.channel.send(unknownCommand)
         }
         else {
@@ -41,7 +40,7 @@ module.exports = (Discord, client, message) => {
                 if(findCommand.items) {
                     knownCommand.addField('Items', findCommand.items, false)
                 }
-                knownCommand.setColor(colors.default)
+                knownCommand.setColor(config.colors.default)
                 knownCommand.setFooter(`PolarBot™ ${config.version}`)
                 if(findCommand.image) {
                     knownCommand.setImage(findCommand.image)
