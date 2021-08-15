@@ -20,3 +20,5 @@ module.exports = {
     }
 }
 ```
+
+> [Click Here](https://github.com/Arcturusss/Polar-Discord/blob/master/README.md) for more information on Polar
