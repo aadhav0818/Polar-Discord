@@ -13,11 +13,17 @@ for(let i = 1; i <= 26; i++) {
 
 for(let i = 0; i < english_words.length; i++) { 
     let primeCombination = 1;
-    let charArray = (english_words[i].split(''));
+    let charArray = (english_words[i].toUpperCase()).split('');
     charArray.forEach(element => {
         primeCombination = primeCombination * primeMap.get(element);
     });
-    hashMap.set(primeCombination, `${english_words[i]}`)
+    if(hashMap.has(primeCombination) == true) {
+        hashMap.get(primeCombination).push(english_words[i])   
+    }
+    else {
+        wordArray = [english_words[i]];
+        hashMap.set(primeCombination, wordArray)
+    }
 }
 
 module.exports = {
@@ -35,14 +41,26 @@ module.exports = {
     async execute(client, message, args, Discord) {
         let scramble = args[0];
         let scramblePrimeCombination = 1;
-        scramble.forEach(element => {
+        (scramble.toUpperCase()).split('').forEach(element => {
             scramblePrimeCombination = scramblePrimeCombination * primeMap.get(element);
         })
+        const embed = new Discord.MessageEmbed()
+            .setColor(config.colors.default)
+            .setTitle('Unscrambles Found')
+            .addField('Attempted Unscramble', `${scramble}`);
+        let isunScramble = false;
         if(hashMap.has(scramblePrimeCombination) == true) {
-            return message.channel.send(`Scramble Found: ${hashMap.get(scramblePrimeCombination)}`)
+            isunScramble = true;
         }
         else {
-            return message.channel.send(`Scramble not found! Attempted string: ${scramble}`)
+            isunScramble = false;
         }
+        if(isunScramble == true) {
+            embed.addField('Scrambles', `✅ ${(hashMap.get(scramblePrimeCombination).toString()).replace(/,/g, '\n✅ ')}`);
+        }
+        else {
+            embed.addField('Scrambles', `⛔ None Found `)
+        }
+        message.channel.send({ embeds: [embed] })
     }
 }
