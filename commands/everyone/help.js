@@ -22,4 +22,4 @@ module.exports = {
             message.channel.send({ embeds: [embedHelp] })
         }
     }
-}
+}   
