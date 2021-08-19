@@ -26,7 +26,7 @@ module.exports = (Discord, client, message) => {
                 .addField('Reason', `${config.errors.UNKNOWN_CMD_ERROR} Do ${config.prefix}help to see a list of commands!`, false)
                 .addField('Usage', '```js\n' + `${config.prefix}help [command]` + '```')
                 .setColor(config.colors.error)
-            message.channel.send(unknownCommand)
+            message.channel.send({ embeds: [unknownCommand] })
         }
         else {
             let findCommand = client.commands.find(cmd => cmd.name == commandName)
@@ -35,17 +35,17 @@ module.exports = (Discord, client, message) => {
                 .addField('Description', findCommand.description, false)
                 .addField('Usage', findCommand.usage, false)
                 if(findCommand.example) {
-                    knownCommand.addField('Example', findCommand.example, false)
+                    knownCommand.addField('Example', findCommand.example.toString(), false)
                 }
                 if(findCommand.items) {
                     knownCommand.addField('Items', findCommand.items, false)
                 }
                 knownCommand.setColor(config.colors.default)
-                knownCommand.setFooter(`PolarBot™ ${config.version}`)
+                knownCommand.setFooter(`Polar ${config.version}`)
                 if(findCommand.image) {
                     knownCommand.setImage(findCommand.image)
                 }
-            message.channel.send(knownCommand)
+            message.channel.send({ embeds: [knownCommand] })
         }
     }
 
