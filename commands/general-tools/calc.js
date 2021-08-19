@@ -17,7 +17,7 @@ module.exports = {
                     .addField('Reason', errors.noArgsErr , false)
                     .addField('Usage', this.usage, false)
                     .addField('Example', this.example, false)
-                    .setColor(colors.error)
+                    .setColor(config.colors.error)
                 return message.channel.send(noArgsEmbed)
             }
             result = result.replace(/ /g, "")
@@ -43,7 +43,7 @@ module.exports = {
                     .addField('Reason', errors.illegalCharErr)
                     .addField('Usage', this.usage, false)
                     .addField('Example', this.example, false)
-                    .setColor(colors.error)
+                    .setColor(config.colors.error)
                  return message.channel.send(iglCharErr)
             }
             
@@ -53,7 +53,7 @@ module.exports = {
                     .addField('Reason', errors.illegalCharErr)
                     .addField('Usage', this.usage, false)
                     .addField('Example', this.example, false)
-                    .setColor(colors.error)
+                    .setColor(config.colors.error)
                 return message.channel.send(iglCharErr)
             }
 
@@ -278,7 +278,7 @@ module.exports = {
                 .setTitle('Calculator')
                 .addField('Result', '```js\n' + result + '```', 'false')
                 .addField('Expression', '```js\n' + expression + '```', false)
-                .setColor(colors.default)
+                .setColor(config.colors.default)
             return message.channel.send(resultEmbed)
 
         }
@@ -288,7 +288,7 @@ module.exports = {
                 .addField('Reason', 'Incorrect Syntax or there was no defined answer')
                 .addField('Usage', this.usage, false)
                 .addField('Example', this.example, false)
-                .setColor(colors.error)
+                .setColor(config.colors.error)
             return message.channel.send(errEmbed)
         }
     }

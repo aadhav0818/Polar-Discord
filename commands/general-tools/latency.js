@@ -13,7 +13,7 @@ module.exports = {
             .setTitle('Ping Information')
             .addField('User Ping', '```' + userPing + ' ms```')
             .addField('API Ping', '```' + apiPing + ' ms```')
-            .setColor(colors.default)
+            .setColor(config.colors.default)
         message.channel.send({ embeds: [pingEmbed] })
     }
 }

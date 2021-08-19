@@ -14,7 +14,7 @@ module.exports = {
                     .addField('Reason', errors.noArgsErr , false)
                     .addField('Usage', this.usage, false)
                     .addField('Example', this.example, false)
-                    .setColor(colors.error)
+                    .setColor(config.colors.error)
                 return message.channel.send(noArgsEmbed)
             }
             const { username } = await minecraftPlayer(args[0])
@@ -26,7 +26,7 @@ module.exports = {
                 .setTitle(`Minecraft Profile: ${username}`)
                 .setURL(`https://namemc.com/search?q=${username}`)
                 .setFooter('UUID • ' + uuid)
-                .setColor(colors.minecraft)
+                .setColor(config.colors.minecraft)
                 .setThumbnail(`https://crafatar.com/renders/body/${uuid}?overlay`)
             for(let i = usernameHistory.length - 1; i >= 0; i--) {
                if(i != 0) {
@@ -46,7 +46,7 @@ module.exports = {
         const errEmbed = new Discord.MessageEmbed()
             .setTitle('Command Error')
             .addField('Reason', 'Could not find the requested user!')
-            .setColor(colors.error)
+            .setColor(config.colors.error)
         return message.channel.send(errEmbed)
     }
 }

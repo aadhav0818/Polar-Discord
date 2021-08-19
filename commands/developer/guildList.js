@@ -23,7 +23,7 @@ module.exports = {
             .setDescription(list)
             .addField('Guild Count', client.guilds.cache.size)
             .addField('Users', users)
-            .setColor(colors.default)
+            .setColor(config.colors.default)
         message.author.send({ embeds: [listEmbed] })
   
         }

@@ -16,7 +16,7 @@ module.exports = {
                     .addField('Reason', 'No user was provided!' , false)
                     .addField('Usage', this.usage, false)
                     .addField('Example', this.example, false)
-                    .setColor(colors.error)
+                    .setColor(config.colors.error)
                 return message.channel.send(noArgsEmbed)
             }
                 let username = args[0];
@@ -26,7 +26,7 @@ module.exports = {
                     const errEmbed = new Discord.MessageEmbed()
                         .setTitle('Command Error')
                         .addField('Reason', 'The user requested has a hidden profile!')
-                        .setColor(colors.error)
+                        .setColor(config.colors.error)
                     return message.channel.send(errEmbed)
                 }
                 const userProfile = new Discord.MessageEmbed()
@@ -37,7 +37,7 @@ module.exports = {
                     .addField('Account Creation Date', moment.utc(data.created_utc * 1000).format('MM/DD/YYYY, h:mm A '), true)
                     .addField('User ID', data.id, true)
                     .addField('Premium Member', data.is_gold ? "Yes" : "No" , true)
-                    .setColor(colors.reddit)
+                    .setColor(config.colors.reddit)
                     .setThumbnail(data.icon_img.replace(/(amp;)/gi, ""))
                 message.channel.send(userProfile)
         }
@@ -45,7 +45,7 @@ module.exports = {
             const errEmbed = new Discord.MessageEmbed() 
                 .setTitle('Command Error')
                 .addField('Reason', 'Could not find the requested reddit user!')
-                .setColor(colors.error)
+                .setColor(config.colors.error)
             message.channel.send(errEmbed)
         }
     }

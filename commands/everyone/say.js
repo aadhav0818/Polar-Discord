@@ -34,7 +34,7 @@ module.exports = {
                 .addField('Reason', errors.noArgsErr, false)
                 .addField('Usage', this.usage, false)
                 .addField('Example', this.example)
-                .setColor(colors.error)
+                .setColor(config.colors.error)
             return message.channel.send({ embeds: [errEmbed] });
         }
     }

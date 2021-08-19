@@ -15,7 +15,7 @@ module.exports = {
             .setTitle('Guild/User Information')
             .addField('Guilds Joined', client.guilds.cache.size, true)
             .addField('Total Users', users, true)
-            .setColor(colors.default)
+            .setColor(config.colors.default)
         message.channel.send({ embeds: [userEmbed] })
     }
 }

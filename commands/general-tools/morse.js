@@ -13,7 +13,7 @@ module.exports = {
                 .addField('Reason', 'No action (encode/decode) was specifed!', false)
                 .addField('Usage', this.usage, false)
                 .addField('Example', this.example, false)
-                .setColor(colors.error)
+                .setColor(config.colors.error)
             return message.channel.send(noArgsEmbed)
         }
         if(!args[1]) {
@@ -22,7 +22,7 @@ module.exports = {
                 .addField('Reason', 'No text was provided!', false)
                 .addField('Usage', this.usage, false)
                 .addField('Example', this.example, false)
-                .setColor(colors.error)    
+                .setColor(config.colors.error)    
             return message.channel.send(noArgsEmbed)
         }
         const action = args[0].toLowerCase();
@@ -66,7 +66,7 @@ module.exports = {
             const decodeEmbed = new Discord.MessageEmbed()
                 .setTitle('Morse Code Decryption')
                 .setDescription('```' + text + '```')
-                .setColor(colors.default)
+                .setColor(config.colors.default)
             message.channel.send(decodeEmbed)
         }
 
@@ -107,7 +107,7 @@ module.exports = {
             const encodeEmbed = new Discord.MessageEmbed()
                 .setTitle('Morse Code Encryption')
                 .setDescription('```' + text + '```')
-                .setColor(colors.default)
+                .setColor(config.colors.default)
             message.channel.send(encodeEmbed)
         }
         else {
@@ -115,7 +115,7 @@ module.exports = {
                 .setTitle('Command Error')
                 .addField('Reason', 'Invalid Action, Please use either encode or decode!')
                 .addField('Example', this.example, false)
-                .setColor(colors.error)
+                .setColor(config.colors.error)
             message.channel.send(noActionEmbed)
         }
 

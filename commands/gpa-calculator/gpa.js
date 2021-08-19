@@ -11,7 +11,7 @@ module.exports = {
             const promptColor = new Discord.MessageEmbed() 
                 .setTitle('')
                 .setDescription('Enter the amount of classes/semesters you would like to calculate for')
-                .setColor(colors.default)
+                .setColor(config.colors.default)
           
             const prompts = [promptColor]
             let question = 0;
@@ -33,7 +33,7 @@ module.exports = {
                             for(var i = 1; i <= classAmt; i++) {
                                 const askClass = new Discord.MessageEmbed()
                                     .setDescription('')
-                                    .setColor(colors.default)
+                                    .setColor(config.colors.default)
                             }
 
 
@@ -47,7 +47,7 @@ module.exports = {
                             const errEmbed = new Discord.MessageEmbed() 
                                 .setTitle('Command Error')
                                 .addField('Reason', 'You did not enter an integer value for your classes! Please try again')
-                                .setColor(colors.error)
+                                .setColor(config.colors.error)
                             message.channel.send(errEmbed)
                         }
                     }
@@ -60,7 +60,7 @@ module.exports = {
             const errEmbed = new Discord.MessageEmbed() 
                 .setTitle('Command Error')
                 .addField('Reason', 'Your DM is closed to friends! To change this, go to your settings and enable dms from server users')
-                .setColor(colors.error)
+                .setColor(config.colors.error)
             message.channel.send(errEmbed)
         }
     }

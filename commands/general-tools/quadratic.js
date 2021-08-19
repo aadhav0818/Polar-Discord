@@ -13,7 +13,7 @@ module.exports = {
                 .addField('Reason', 'The argument(s) provided contained illegal characters')
                 .addField('Usage', this.usage, false)
                 .addField('Example', this.example, false)
-                .setColor(colors.error)
+                .setColor(config.colors.error)
             const regex = /[0-9]/;
             var a = (args[0])
             if(!args[0]) {
@@ -22,7 +22,7 @@ module.exports = {
                 .addField('Reason', errors.noArgsErr , false)
                 .addField('Usage', this.usage, false)
                 .addField('Example', this.example, false)
-                .setColor(colors.error)
+                .setColor(config.colors.error)
                 return message.channel.send(noArgsEmbed)
             }
             var b = (args[1])
@@ -69,7 +69,7 @@ module.exports = {
               .addField('Vertex', '(' + xVer + ',' + yVer + ')', true)
               .addField('AOS', aos, true)
               .addField(endpoint, aos, true)
-              .setColor(colors.default)
+              .setColor(config.colors.default)
               .setFooter('Disclaimer: Cannot calculate complex roots at the moment\nNaN represents a complex root')
             return message.channel.send(roots)
 
@@ -80,7 +80,7 @@ module.exports = {
                 .addField('Reason', 'The argument(s) provided contained illegal characters')
                 .addField('Usage', this.usage, false)
                 .addField('Example', this.example, false)
-                .setColor(colors.error)
+                .setColor(config.colors.error)
             return message.channel.send(errEmbed)
         }
     }

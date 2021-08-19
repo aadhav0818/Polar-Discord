@@ -21,7 +21,7 @@ module.exports = {
         const resultEmbed = new Discord.MessageEmbed()
             .setTitle('Coinflip Result')
             .addField('Result', face)
-            .setColor(colors.default)
+            .setColor(config.colors.default)
         return message.channel.send(resultEmbed)
     }
 }

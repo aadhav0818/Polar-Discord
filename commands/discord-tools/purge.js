@@ -11,14 +11,14 @@ module.exports = {
                 const dmEmbed = new Discord.MessageEmbed()
                     .setTitle('Command Error')
                     .addField('Reason', 'This command can only be used in a server!')
-                    .setColor(colors.error)
+                    .setColor(config.colors.error)
                 return message.author.send(dmEmbed);
             }
             if(!message.member.hasPermission('MANAGE_MESSAGES')) {
                 const noPermsEmbed = new Discord.MessageEmbed() 
                     .setTitle('Command Error')
                     .addField('Reason', 'Missing permissions: `MANAGE_MESSAGES`', false)
-                    .setColor(colors.error)
+                    .setColor(config.colors.error)
                 return message.channel.send(noPermsEmbed)
             }
             if(!args[0]) {
@@ -27,7 +27,7 @@ module.exports = {
                     .addField('Reason', errors.noArgsErr , false)
                     .addField('Usage', this.usage, false)
                     .addField('Example', this.example, false)
-                    .setColor(colors.error)
+                    .setColor(config.colors.error)
                 return message.channel.send(noArgsEmbed)
             }
 
@@ -36,7 +36,7 @@ module.exports = {
                 const countEmbed = new Discord.MessageEmbed()
                 .setTitle('Command Error')
                 .addField('Reason', 'You may only bulk delete 1-100 messages at a time!')
-                .setColor(colors.error)
+                .setColor(config.colors.error)
                 return message.channel.send(countEmbed)
             }
             const regex = /[^0-9]+/
@@ -46,13 +46,13 @@ module.exports = {
                     .addField('Reason', errors.illegalCharErr , false)
                     .addField('Usage', this.usage, false)
                     .addField('Example', this.example, false)
-                    .setColor(colors.error)
+                    .setColor(config.colors.error)
                 return message.channel.send(illegalCharEmbed)
             }
             await message.channel.bulkDelete(deleteCount) 
                 const successEmbed = new Discord.MessageEmbed()
                     .setTitle('Deleted ' + deleteCount + " messages from this channel!")
-                    .setColor(colors.success)
+                    .setColor(config.colors.success)
             message.channel.send(successEmbed).then(sentMessage => {
                 try {
                 setTimeout(() => {
@@ -70,7 +70,7 @@ module.exports = {
             const errEmbed = new Discord.MessageEmbed()
                 .setTitle('Command Error')
                 .addField('Reason', 'You cannot delete messages that are over 14 days old!')
-                .setColor(colors.error)
+                .setColor(config.colors.error)
             return message.channel.send(errEmbed)
             
         }

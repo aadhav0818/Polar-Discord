@@ -14,7 +14,7 @@ module.exports = {
                     .addField('Reason', errors.noArgsErr , false)
                     .addField('Usage', this.usage, false)
                     .addField('Example', this.example, false)
-                    .setColor(colors.error)
+                    .setColor(config.colors.error)
                 return message.channel.send(noArgsEmbed)
             }               
 
@@ -29,14 +29,14 @@ module.exports = {
                 .setURL(`https://namemc.com/search?q=${username}`)
                 .setThumbnail(`https://crafatar.com/renders/body/${uuid}?overlay`)
                 .setDescription(`\n:eject: **[Download Mincraft Skin PNG](${textures.skin.url} "Download Skin for Minecraft")**\n:eject: **[Download Skin Render PNG](https://crafatar.com/renders/body/${uuid}?overlay "Download Render")**`)
-                .setColor(colors.minecraft)
+                .setColor(config.colors.minecraft)
             message.channel.send(skinEmbed)
         }
         catch(err) {
             const errEmbed = new Discord.MessageEmbed()
                 .setTitle('Command Error')
                 .addField('Reason', 'Could not find the requested user!')
-                .setColor(colors.error)
+                .setColor(config.colors.error)
             return message.channel.send(errEmbed)
         }
     }

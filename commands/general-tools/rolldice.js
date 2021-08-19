@@ -13,7 +13,7 @@ module.exports = {
                 .setTitle('Dice Roll Result')
                 .addField('Faces', '6', true)
                 .addField('Result', parseInt((Math.random() * 6) + 1), true)
-                .setColor(colors.default)
+                .setColor(config.colors.default)
             return message.channel.send(resultEmbed)
         }             
         const regex = /[^0-9]+/ 
@@ -22,7 +22,7 @@ module.exports = {
                 .setTitle('Command Error')
                 .addField('Reason', errors.illegalCharErr , false)
                 .addField('Example', this.example, false)
-                .setColor(colors.error)
+                .setColor(config.colors.error)
             return message.channel.send(invalidCharEmbed)
         }
 
@@ -79,7 +79,7 @@ module.exports = {
                 resultEmbed.addField(`Face ${i + 1}`, `${percentage}%`, true)
 
             }
-            resultEmbed.setColor(colors.default)
+            resultEmbed.setColor(config.colors.default)
         message.channel.send(resultEmbed)
     }
 }

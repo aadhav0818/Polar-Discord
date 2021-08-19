@@ -17,7 +17,7 @@ module.exports = {
                 .addField('Calculators and Translators', '```' + '\ncalc\nconvert\nmorse\nquadratic\ncoinflip\nrolldice\nunscramble' + '```')
                 .addField('Search and Statistics', '```' + '\nreddit-profile\nreddit-meme' + '```' + '```' + '\nminecraft-namehistory\nminecraft-skinsteal\nminecraft-namecheck' + '```')
                 .addField('Moderation', '```' + '\npurge\nembed' + '```')
-                .setColor(colors.default)
+                .setColor(config.colors.default)
                 .setFooter(`PolarBot™ ${config.version}`)
             message.channel.send({ embeds: [embedHelp] })
         }

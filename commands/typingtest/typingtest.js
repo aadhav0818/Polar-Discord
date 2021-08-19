@@ -13,7 +13,7 @@ module.exports = {
     example: '```' + `${config.prefix}typingtest medium random`+ '```', 
     async execute(client, message, args, Discord) {
 
-        if(!args[0]) {const noArgsEmbed = new Discord.MessageEmbed().setTitle('Command Error').addField('Reason', errors.noArgsErr , false).addField('Usage', this.usage, false).addField('Example', this.example, false).setColor(colors.error)
+        if(!args[0]) {const noArgsEmbed = new Discord.MessageEmbed().setTitle('Command Error').addField('Reason', errors.noArgsErr , false).addField('Usage', this.usage, false).addField('Example', this.example, false).setColor(config.colors.error)
         return message.channel.send(noArgsEmbed)}         
 
         const length = args[0].toLowerCase()
@@ -72,7 +72,7 @@ module.exports = {
         .addField('Length', length, true)
         .addField('Type', isRandom ? "Random" : "Normal", true)
         .addField('Typing Test', words)
-        .setColor(colors.default)
+        .setColor(config.colors.default)
 
         const prompts = [testEmbed]
         let question = 0;
@@ -117,12 +117,12 @@ module.exports = {
                     .addField('Type', isRandom ? "Random" : "Normal", true)
                     .addField('Accuracy', result + '%', true)
                     .addField('WPM Adjusted', (wpm * 60).toLocaleString(), true)
-                    .setColor(colors.default)
+                    .setColor(config.colors.default)
                     if(note != '') {
                         resultEmbed.setDescription(note)
                     }
                     if(wpm * 60 > 230) {
-                        resultEmbed.setColor(colors.error)
+                        resultEmbed.setColor(config.colors.error)
                         resultEmbed.addField('Alert', 'Copy paste detected', true)
                     }
                     message.channel.send(resultEmbed)

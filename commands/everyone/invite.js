@@ -13,7 +13,7 @@ module.exports = {
     async execute(client, message, args, Discord) {
         const info = new Discord.MessageEmbed() 
         .setTitle('Invite Link')
-        .setColor(colors.default)
+        .setColor(config.colors.default)
         .setDescription('To Invite PolarBot [Click Here!](https://discord.com/api/oauth2/authorize?client_id=760553137605181541&permissions=4294967287&scope=bot) This really helps with the growth of this bot, so please consider sharing this to others :)')
 
         .addField('Coming Soon', 'Polarbot Website & Documentation')

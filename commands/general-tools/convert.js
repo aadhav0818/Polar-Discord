@@ -15,11 +15,11 @@ module.exports = {
                 .addField('Reason', errors.noArgsErr , false)
                 .addField('Usage', this.usage, false)
                 .addField('Example', this.example, false)
-                .setColor(colors.error)
+                .setColor(config.colors.error)
                 return message.channel.send(noArgsEmbed)
             }
             const resultEmbed = new Discord.MessageEmbed() 
-                .setColor(colors.default)
+                .setColor(config.colors.default)
 
             if(!args[1]) {
                 const noArgsEmbed = new Discord.MessageEmbed() 
@@ -27,7 +27,7 @@ module.exports = {
                 .addField('Reason', 'No inital base or target base was specified!', false)
                 .addField('Usage', this.usage, false)
                 .addField('Example', this.example, false)
-                .setColor(colors.error)
+                .setColor(config.colors.error)
                 return message.channel.send(noArgsEmbed)
             }
             if(!args[2]) {
@@ -36,7 +36,7 @@ module.exports = {
                 .addField('Reason', 'No target base was specified!', false )
                 .addField('Usage', this.usage, false)
                 .addField('Example', this.example, false)
-                .setColor(colors.error)
+                .setColor(config.colors.error)
                 return message.channel.send(noArgsEmbed)
             }
             const value = (args[0]);
@@ -58,7 +58,7 @@ module.exports = {
                     .setTitle('Command Error')
                     .addField('Reason', 'The inital value entered is not a member of the inital base provided!')
                     .addField('Example', this.example, false)
-                    .setColor(colors.error)
+                    .setColor(config.colors.error)
                 return message.channel.send(nanEmbed)
             }
             resultEmbed.setTitle('Base Converter')
@@ -71,7 +71,7 @@ module.exports = {
                 .setTitle('Command Error')
                 .addField('Reason', 'Radix value must be between 2 and 36!')
                 .addField('Example', this.example, false)
-                .setColor(colors.error)
+                .setColor(config.colors.error)
             return message.channel.send(errEmbed)
         }
     }

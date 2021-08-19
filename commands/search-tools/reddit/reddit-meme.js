@@ -14,7 +14,7 @@ module.exports = {
                 .addField('Reason', errors.noArgsErr , false)
                 .addField('Usage', this.usage, false)
                 .addField('Example', this.example, false)
-                .setColor(colors.error)
+                .setColor(config.colors.error)
             return message.channel.send(noArgsEmbed)
         }
     try {
@@ -33,7 +33,7 @@ module.exports = {
                 .setTitle('Command Error')
                 .addField('Reason', 'Could not find the requested subreddit! This may happen if the subreddit is void of images or if it is non-existent')
                 .addField('Example', this.example, false)
-                .setColor(colors.error)
+                .setColor(config.colors.error)
             return message.channel.send(errEmbed)
         }
         if(meme) {
@@ -41,7 +41,7 @@ module.exports = {
             .setTitle('Reddit Meme: r/' + subreddit)
             .setURL(`https://www.reddit.com/r/${subreddit}`)
             .setImage(await meme)
-            .setColor(colors.reddit)
+            .setColor(config.colors.reddit)
         return message.channel.send(memeEmbed)
         }
     }
@@ -50,7 +50,7 @@ module.exports = {
             .setTitle('Command Error')
             .addField('Reason', 'Could not find the requested subreddit! This may happen if the subreddit is void of images or if it is non-existent' )
             .addField('Example', this.example, false)
-            .setColor(colors.error)
+            .setColor(config.colors.error)
         return message.channel.send(errEmbed)
     }
 

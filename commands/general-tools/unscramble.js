@@ -57,7 +57,7 @@ module.exports = {
         }
         if(isunScramble == true) {
             embed.addField('Scrambles', `✅ ${(hashMap.get(scramblePrimeCombination).toString()).replace(/,/g, '\n✅ ')}`);
-        }
+        }   
         else {
             embed.addField('Scrambles', `⛔ None Found `)
         }

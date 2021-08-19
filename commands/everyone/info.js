@@ -11,7 +11,7 @@ module.exports = {
            })
         const info = new Discord.MessageEmbed() 
             .setTitle('Invite Link')
-            .setColor(colors.default)
+            .setColor(config.colors.default)
             .setAuthor('PolarBot Information', client.user.displayAvatarURL(), 'https://discord.com/api/oauth2/authorize?client_id=760553137605181541&permissions=4294967287&scope=bot')
             .setURL('https://discord.com/api/oauth2/authorize?client_id=760553137605181541&permissions=4294967287&scope=bot')
             .addField('Developer', 'P0LARB34R#4038', false)

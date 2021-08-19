@@ -21,7 +21,7 @@ module.exports = {
                     .addField('Reason', errors.noArgsErr, false)
                     .addField('Usage', this.usage, false)
                     .addField('Example', this.example, false)
-                    .setColor(colors.error)
+                    .setColor(config.colors.error)
                 return message.channel.send({ embeds: [noArgsEmbed] })
             }
             const colorEmbed = new Discord.MessageEmbed() 
@@ -33,7 +33,7 @@ module.exports = {
             const errEmbed = new Discord.MessageEmbed()
                 .setTitle('Command Error')
                 .addField('Reason', 'Invalid Color Range')
-                .setColor(colors.error)
+                .setColor(config.colors.error)
             message.channel.send({ embeds: [errEmbed] })
         }   
     }
