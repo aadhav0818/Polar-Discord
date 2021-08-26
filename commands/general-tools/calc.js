@@ -18,7 +18,7 @@ module.exports = {
                     .addField('Usage', this.usage, false)
                     .addField('Example', this.example, false)
                     .setColor(config.colors.error)
-                return message.channel.send(noArgsEmbed)
+                return message.channel.send({ embeds: [noArgsEmbed] })
             }
             result = result.replace(/ /g, "")
 
@@ -44,7 +44,7 @@ module.exports = {
                     .addField('Usage', this.usage, false)
                     .addField('Example', this.example, false)
                     .setColor(config.colors.error)
-                 return message.channel.send(iglCharErr)
+                 return message.channel.send({ embeds: [iglCharErr] })
             }
             
             if(!operations.some(words => result.includes(words)) ) {
@@ -279,7 +279,7 @@ module.exports = {
                 .addField('Result', '```js\n' + result + '```', 'false')
                 .addField('Expression', '```js\n' + expression + '```', false)
                 .setColor(config.colors.default)
-            return message.channel.send(resultEmbed)
+            return message.channel.send({ embeds: [resultEmbed] })
 
         }
         catch(err) {
@@ -289,7 +289,7 @@ module.exports = {
                 .addField('Usage', this.usage, false)
                 .addField('Example', this.example, false)
                 .setColor(config.colors.error)
-            return message.channel.send(errEmbed)
+            return message.channel.send({ embeds: [errEmbed] })
         }
     }
 }
