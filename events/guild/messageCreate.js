@@ -3,14 +3,6 @@ const config = require('../../config.json');
 
 module.exports = (Discord, client, message) => {
 
-    setInterval(() => {
-        let users = 0;
-        client.guilds.cache.forEach(guild => {
-            users += guild.memberCount;
-        })
-        client.user.setActivity(client.guilds.cache.size + ' Discord servers and ' + users + ' users', { type: 'WATCHING' })
-    }, 60000);
-
     const prefix = config.prefix;
     if(!message.content.startsWith(prefix) || message.author.bot) return;
     const args = message.content.slice(prefix.length).split(/ +/);
