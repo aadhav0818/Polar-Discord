@@ -1,4 +1,5 @@
 const Discord = require("discord.js")
+const { Permissions } = require('discord.js');
 const config = require('../../config.json')
 module.exports = {
     name: 'purge',
@@ -12,23 +13,21 @@ module.exports = {
                     .setTitle('Command Error')
                     .addField('Reason', 'This command can only be used in a server!')
                     .setColor(config.colors.error)
-                return message.author.send(dmEmbed);
+                return message.author.send({ embeds: [dmEmbed] });;
             }
-            if(!message.member.hasPermission('MANAGE_MESSAGES')) {
+            if(!message.member.permissions.has(Permissions.FLAGS.DELETE_MESSAGES)) {
                 const noPermsEmbed = new Discord.MessageEmbed() 
                     .setTitle('Command Error')
                     .addField('Reason', 'Missing permissions: `MANAGE_MESSAGES`', false)
                     .setColor(config.colors.error)
-                return message.channel.send(noPermsEmbed)
+                return message.channel.send({ embeds: [noPermsEmbed] });
             }
             if(!args[0]) {
                 const noArgsEmbed = new Discord.MessageEmbed() 
-                    .setTitle('Command Error')
-                    .addField('Reason', errors.noArgsErr , false)
-                    .addField('Usage', this.usage, false)
-                    .addField('Example', this.example, false)
+                    .setDescription('**Error:** Cannot delete messages older than 14 days')
                     .setColor(config.colors.error)
-                return message.channel.send(noArgsEmbed)
+                    .setFooter(`Try ${config.prefix}help ${this.name}`)
+                return message.channel.send({ embeds: [noArgsEmbed] });
             }
 
             const deleteCount = args[0];
@@ -37,7 +36,7 @@ module.exports = {
                 .setTitle('Command Error')
                 .addField('Reason', 'You may only bulk delete 1-100 messages at a time!')
                 .setColor(config.colors.error)
-                return message.channel.send(countEmbed)
+                return message.channel.send({ embeds: [countEmbed] });
             }
             const regex = /[^0-9]+/
             if(regex.test(deleteCount) == true) {
@@ -47,13 +46,13 @@ module.exports = {
                     .addField('Usage', this.usage, false)
                     .addField('Example', this.example, false)
                     .setColor(config.colors.error)
-                return message.channel.send(illegalCharEmbed)
+                return message.channel.send({ embeds: [illegalCharEmbed] });
             }
             await message.channel.bulkDelete(deleteCount) 
                 const successEmbed = new Discord.MessageEmbed()
-                    .setTitle('Deleted ' + deleteCount + " messages from this channel!")
+                    .setDescription(`Deleted **${deleteCount}** messages from **#${message.channel.name}**`)
                     .setColor(config.colors.success)
-            message.channel.send(successEmbed).then(sentMessage => {
+            message.channel.send({ embeds: [successEmbed] }).then(sentMessage => {
                 try {
                 setTimeout(() => {
                     sentMessage.delete()
@@ -68,10 +67,10 @@ module.exports = {
         
         catch(err) {
             const errEmbed = new Discord.MessageEmbed()
-                .setTitle('Command Error')
-                .addField('Reason', 'You cannot delete messages that are over 14 days old!')
+                .setDescription('**Error:** Cannot delete messages older than 14 days')
                 .setColor(config.colors.error)
-            return message.channel.send(errEmbed)
+                .setFooter(`Try ${config.prefix}help ${this.name}`)
+            return message.channel.send({ embeds: [errEmbed] });
             
         }
 
