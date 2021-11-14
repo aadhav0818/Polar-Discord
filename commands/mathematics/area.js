@@ -4,9 +4,19 @@ const { argument, figure } = require('../../objects/throwArg.js');
 
 module.exports = {
     name: 'area',
-    description: 'Calculates the area of a square',
-    usage: `${config.prefix}area square [dim]`,
-    example: `${config.prefix}area square 2`,
+    description: 'Calculates the area of an assortment of polygons',
+    contextMenu : {
+        placeHolder: 'Select Shape',
+        label: {
+            op1: 'Square',
+            op2: 'Rectangle',
+            op3: 'triangle',
+            op4: 'trapezoid',
+        },
+        desc: {
+            op1 : 'Click to see Syntax',
+        }
+    },
     async execute(client, message, args, Discord) {
         [argument, figure].forEach(execption => {
             execption.setFooter(`Try ${config.prefix}help ${this.name}`)
@@ -21,7 +31,7 @@ module.exports = {
             square(x) { return Math.pow(x, 2) }
             rect(x, y) { return x * y }
             tri(b, h) { return 0.5 * b * h}
-            trap(b1, b2, h) {return ((b1 + b2) * h) / 2}
+            trap(b1, b2, h) { return ((b1 + b2) * h) / 2 }
         }
 
         const areacalc = new Area();

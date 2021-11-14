@@ -33,10 +33,10 @@ module.exports = {
                     let date = usernameHistory[i].changedAt
                     const regex = /[0-9]{4,10}-[0-9]{2}-[0-9]{2}/
                     date = regex.exec(date);
-                    profileEmbed.addField(usernameHistory[i].username, date, true)
+                    profileEmbed.addField(usernameHistory[i].username.toString(), date.toString(), true)
                }
                else {
-                    profileEmbed.addField(usernameHistory[i].username, 'xxxx-xx-xx', true)
+                    profileEmbed.addField(usernameHistory[i].username.toString(), 'xxxx-xx-xx', true)
                }
             }
             message.channel.send({ embeds: [profileEmbed] });

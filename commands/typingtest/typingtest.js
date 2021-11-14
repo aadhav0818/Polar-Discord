@@ -14,7 +14,7 @@ module.exports = {
     async execute(client, message, args, Discord) {
 
         if(!args[0]) {const noArgsEmbed = new Discord.MessageEmbed().setTitle('Command Error').addField('Reason', errors.noArgsErr , false).addField('Usage', this.usage, false).addField('Example', this.example, false).setColor(config.colors.error)
-        return message.channel.send(noArgsEmbed)}         
+        return message.channel.send({embeds: [noArgsEmbed] })}         
 
         const length = args[0].toLowerCase()
         let wordcount = 0; let note = ""; let isRandom = false;
@@ -78,7 +78,7 @@ module.exports = {
         let question = 0;
         const collector = new Discord.MessageCollector(message.channel, m => m.author.id === message.author.id, {max: prompts.length, time: 600000});
         let timestamp_first = '';
-        message.channel.send(prompts[question++]).then(sentMessage => {
+        message.channel.send({embeds: [prompts[question++]] }).then(sentMessage => {
             timestamp_first = sentMessage.createdTimestamp
         })
         collector.on('collect', m => {
@@ -125,7 +125,7 @@ module.exports = {
                         resultEmbed.setColor(config.colors.error)
                         resultEmbed.addField('Alert', 'Copy paste detected', true)
                     }
-                    message.channel.send(resultEmbed)
+                    message.channel.send({embeds: [resultEmbed] })
                 }
                
             })
