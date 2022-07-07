@@ -9,6 +9,9 @@
     <img src = 'https://img.shields.io/discord/875139099944710204?style=for-the-badge'></img>
 </p>
 
+## Development Update
+Unfortuately project POLAR has shut down and is no longer in development. Thank you to everyone who used this service.  
+
 ## About
 Polar is a discord bot dedicated to the fields of science, technology, engineering, and mathematics (STEM).
 
