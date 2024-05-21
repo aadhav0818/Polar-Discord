@@ -13,15 +13,12 @@
 Unfortuately project POLAR has shut down and is no longer in development. Thank you to everyone who used this service.  
 
 ## About
-Polar is a discord bot dedicated to the fields of science, technology, engineering, and mathematics (STEM).
 
-- Physics calculations
 - Mathematical calculations
 - Search tools
 - Useful built in applications
 - Statistical calculations
-- Engineering calculations
-- Great and handy for STEM enthusiasts
+- Discord Commands
 
 > Completely free to use and no transactions required for anything
 ## Links
@@ -36,7 +33,6 @@ Polar is a discord bot dedicated to the fields of science, technology, engineeri
 [<b>Click Here</b>](https://discord.com/api/oauth2/authorize?client_id=760553137605181541&permissions=8&scope=bot) to invite Polar Bot! 
 > **Note:** Denying the administrator permission may cause a few commands to malfunction
 
-[<b>Click Here</b>](https://discord.gg/brK375AgfR) to join the Polar Support Server!
 
 ## Contributing
 
