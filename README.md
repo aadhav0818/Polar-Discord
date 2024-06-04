@@ -10,7 +10,7 @@
 </p>
 
 ## Development Update
-Unfortuately project POLAR has shut down and is no longer in development. Thank you to everyone who used this service.  
+Unfortuately POLAR has shut down and is no longer in development. Thank you to everyone who used this service.  
 
 ## About
 
