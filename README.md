@@ -36,6 +36,7 @@ Unfortuately POLAR has shut down and is no longer in development. Thank you to e
 
 ## Contributing
 
-If you would like to help create new ideas for Polar and assist in the testing process and maintenance of Polar, please feel free to contact me by joining the support server above!
+If you would like to help create new ideas for Polar and assist in the testing process and maintenance of Polar, please feel free to contact me!
+> **Note:** This project is no longer active.
 
 > Developed by P0LARB34R @ September 2020
