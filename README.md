@@ -1,5 +1,5 @@
 <p align = "center">
-    <img src = '"https://i.ibb.co/cw1gLmf/Polar-Github-Banner-removebg-preview.png"'></img>
+    <img src = "https://i.ibb.co/cw1gLmf/Polar-Github-Banner-removebg-preview.png"></img>
 </p>
 <p align = "center">
     <img src = 'https://img.shields.io/npm/v/npm?style=for-the-badge'></img>
